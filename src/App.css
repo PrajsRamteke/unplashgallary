@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+main {
+  display: grid;
+  place-items: center;
+  background-color: rgb(188, 188, 188);
+}
+.container {
+  background-color: rgb(188, 188, 188);
+  width: 80%;
+  padding: 0px 50px;
+}
+.photos {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(1fr, 1fr);
+}
+.images {
+  background: #fff;
+  padding: 3px;
+  border-radius: 3px;
+  box-shadow: 0 4px 6px -1px rgba(31, 31, 31, 0.196),
+    0 2px 4px -1px rgba(0, 0, 0, 0.27);
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) transform;
+  margin: 6px;
+}
+.images:hover {
+  transform: scale(1.03);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.images img {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container h1 {
+  text-align: center;
   color: white;
+  font-family: "Poppins";
 }
 
-.App-link {
-  color: #61dafb;
+input[type="text"] {
+  min-width: 400px;
+  border-radius: 10px;
+  padding: 15px 20px;
+  border: 1px solid #fff;
+  outline: none;
+  margin-right: 12px;
+  font-size: 18px;
+  transition: 0.3s ease border-color;
+  margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="text"]:active,
+input[type="text"]:focus {
+  border-color: #999;
+}
+
+button {
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #2f2f2f;
+  color: #bbb;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  margin-bottom: 30px;
+}
+
+button:hover {
+  background: #111;
+  color: #eee;
+}
+
+form {
+  text-align: center;
 }
